@@ -1,0 +1,112 @@
+# -*- coding: utf-8 -*-
+
+"""
+             - Exercício de Programação - 2020/1
+    ==================================================
+                    Biblioteca Ágil
+
+"""
+
+print("Seja bem-vindo(a) à Biblioteca Ágil\n")
+
+nome = input("Digite seu nome: ")
+
+print("Olá, " + nome + "!")
+
+print("\nEsses são os nossos livros disponíveis no momento:\n ")
+print("● 00001 - Como fazer sentido e bater o martelo - Autor: Alexandro Aolchique - Ano: 2017")
+print("● 00002 - Código Limpo - Autor: Tio Bob - Ano: 2001")
+print("● 00003 - Basquete 101 - Autor: Hortência Marcari - Ano: 2010\n")
+
+# Retirar um livro
+
+print("Você deseja retirar algum dos livros acima?\n")
+
+acao = int(input("Digite '1' para sim e digite '2' para não: "))
+prossiga = "\nEntão você deseja devolver um livro, "
+
+if acao == 1:
+    print("\nDigite o título do livro a ser retirado: ")
+
+else:
+    if acao == 2:
+        print("Você disse que não!" + prossiga + "qual o nome do livro a ser devolvido?")
+
+
+    elif acao != "1" or acao != "2":
+        print("A opção selecionada não é válida, tente novamente!")
+        print("Digite '1' para sim e digite '2' para não:")
+
+
+titulo = input()
+print(f' Excelente escolha! Você tem 7 dias a contar de hoje para devolver o livro {titulo}. \n')
+
+while True:
+
+    # Menu Secundário
+    print(" E agora, o que você deseja fazer? \n")
+    print(" p - Você deseja retirar um livro?")
+    print(" i - Você deseja devolver um livro?")
+    print(" n - Você deseja doar um livro?")
+    print(" x - Voltar ao menu anterior")
+
+    optionMenuSec = input()
+
+    if optionMenuSec == "i":
+
+        # devolver
+
+        print("Digite o nome do livro para devolução")
+        devolucao = input()
+        print(f' Livro {devolucao} devolvido, obrigada!\n')
+
+    elif optionMenuSec == "p":
+
+        print("Esses são os nossos livros disponíveis no momento:\n ")
+        print("● 00001 - Como fazer sentido e bater o martelo - Autor: Alexandro Aolchique - Ano: 2017")
+        print("● 00002 - Código Limpo - Autor: Tio Bob - Ano: 2001")
+        print("● 00003 - Basquete 101 - Autor: Hortência Marcari - Ano: 2010\n")
+        break
+
+    elif optionMenuSec == "n":
+
+        print("Digite o nome do livro, autor e ano a ser doado")
+
+        doacao = input()
+        print(f' {doacao} foi doado com sucesso, obrigada!\n')
+        break
+
+    elif optionMenuSec == "x":
+
+        print("Obrigado por ter utilizado a nossa biblioteca\n")
+        break
+
+    elif optionMainSec != "p" or optionMainSec != "i" or optionMainSec != "n":
+        print("A opção selecionada não é válida, tente novamente!")
+
+while True:
+
+    # Menu
+    print(" E agora, o que você deseja fazer? \n")
+    print(" l - Lista de Livros disponíveis")
+    print(" x - Sair da Biblioteca")
+
+    optionMainMenu = input()
+
+    if optionMainMenu == "l":
+
+        print("Esses são os nossos livros disponíveis no momento:\n ")
+        print("● 00001  - Como fazer sentido e bater o martelo - Autor: Alexandro Aolchique - Ano: 2017")
+        print("● 00002  - Código Limpo - Autor: Tio Bob - Ano: 2001")
+        print("● 00003  - Basquete 101 - Autor: Hortência Marcari - Ano: 2010")
+        print(f'● 00004  - {doacao} ')
+        break
+
+
+    elif optionMainMenu == "x":
+
+        print("Obrigado por ter utilizado a nossa Biblioteca Ágil! ")
+        break
+
+    elif optionMainMenu != "l" or optionMainMenu != "x":
+        print("A opção selecionada não é válida, tente novamente!")
